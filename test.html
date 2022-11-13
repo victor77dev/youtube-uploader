@@ -6,20 +6,14 @@
     <link rel="stylesheet" href="upload_video.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans' type='text/css'>
     <script src="test.js"></script>
-      <button id="sign-in-or-out-button"
-              style="margin-left: 25px">Sign In/Authorize</button>
-      <button id="revoke-access-button"
-              style="display: none; margin-left: 25px">Revoke access</button>
-      
-      <div id="auth-status" style="display: inline; padding-left: 25px"></div><hr>
-      
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script async defer src="https://apis.google.com/js/api.js"
-              onload="this.onload=function(){};handleClientLoad()"
-              onreadystatechange="if (this.readyState === 'complete') this.onload()">
-      </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://accounts.google.com/gsi/client" onload="initClient()" async defer></script>
   </head>
   <body>
+    <h1>Google Identity Services Authorization Token model</h1>
+    <button onclick="getToken();">Get access token</button><br><br>
+    <button onclick="loadCalendar();">Load Calendar</button><br><br>
+    <button onclick="revokeToken();">Revoke token</button>
 
   </body>
 </html>
